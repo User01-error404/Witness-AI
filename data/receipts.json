@@ -1,0 +1,50 @@
+[
+  {
+    "agent_id": "demo-shopping-agent",
+    "task": "Pick best laptop under $1000",
+    "input_seen": "Budget: $1000. Options: [{\"name\":\"Laptop A\",\"price\":950,\"ram\":\"16GB\",\"cpu\":\"Mid-tier\",\"battery\":\"8hr\"},{\"name\":\"Laptop B\",\"price\":880,\"ram\":\"16GB\",\"cpu\":\"Top-tier\",\"battery\":\"10hr\"},{\"name\":\"Laptop C\",\"price\":1050,\"ram\":\"32GB\",\"cpu\":\"Top-tier\",\"battery\":\"6hr\"},{\"name\":\"Laptop D\",\"price\":700,\"ram\":\"8GB\",\"cpu\":\"Entry-level\",\"battery\":\"9hr\"}]",
+    "reasoning_summary": "Laptop B offers the best combination of a top-tier CPU and a reasonable price within the budget.",
+    "decision": "Laptop B",
+    "timestamp": 1781953048,
+    "contentHash": "0x53ed32a36eeb31389b59c9606ecef3b01f34ab60f4539268a2a098364cb5827a",
+    "txHash": "0xccf78e4dc6962572f3dfd6105646f84383c08167d15b5dfdbff74538b857a83b",
+    "receiptId": "0",
+    "blockNumber": 39452442
+  },
+  {
+    "agent_id": "demo-shopping-agent",
+    "task": "Pick best laptop under $1000",
+    "input_seen": "Budget: $1000. Options: [{\"name\":\"Laptop A\",\"price\":950,\"ram\":\"16GB\",\"cpu\":\"Mid-tier\",\"battery\":\"8hr\"},{\"name\":\"Laptop B\",\"price\":880,\"ram\":\"16GB\",\"cpu\":\"Top-tier\",\"battery\":\"10hr\"},{\"name\":\"Laptop C\",\"price\":1050,\"ram\":\"32GB\",\"cpu\":\"Top-tier\",\"battery\":\"6hr\"},{\"name\":\"Laptop D\",\"price\":700,\"ram\":\"8GB\",\"cpu\":\"Entry-level\",\"battery\":\"9hr\"}]",
+    "reasoning_summary": "Laptop B offers the best combination of a top-tier CPU and longer battery life within the budget.",
+    "decision": "Laptop B",
+    "timestamp": 1781956693,
+    "contentHash": "0xa55b3311a7405ad557a621ae5868563d4eb5c0638d96f480e66636085bbf30e4",
+    "txHash": "0xe8d09c227b7b7bf5b5e13d2bfb6976a7d6c38a5ad15df7368f7bfc608eb63a37",
+    "receiptId": "1",
+    "blockNumber": 39461019
+  },
+  {
+    "agent_id": "demo-shopping-agent",
+    "task": "Pick best laptop under $1000",
+    "input_seen": "Budget: $1000. Options: [{\"name\":\"Laptop A\",\"price\":950,\"ram\":\"16GB\",\"cpu\":\"Mid-tier\",\"battery\":\"8hr\"},{\"name\":\"Laptop B\",\"price\":880,\"ram\":\"16GB\",\"cpu\":\"Top-tier\",\"battery\":\"10hr\"},{\"name\":\"Laptop C\",\"price\":1050,\"ram\":\"32GB\",\"cpu\":\"Top-tier\",\"battery\":\"6hr\"},{\"name\":\"Laptop D\",\"price\":700,\"ram\":\"8GB\",\"cpu\":\"Entry-level\",\"battery\":\"9hr\"}]",
+    "reasoning_summary": "It offers the best performance with a top-tier CPU while staying well within the budget.",
+    "decision": "Laptop B",
+    "timestamp": 1781956756,
+    "contentHash": "0x3a1f757662da4a2aa6945ea916c3494291ef7f227566cb9e2c8c72d949334134",
+    "txHash": "0x1ee5c63613718ef289e367f9eebc9811b8e25316b71f5ab80825744ba7c24f61",
+    "receiptId": "2",
+    "blockNumber": 39461167
+  },
+  {
+    "agent_id": "demo-shopping-agent",
+    "task": "Pick best laptop under $1000",
+    "input_seen": "Budget: $1000. Options: [{\"name\":\"Laptop A\",\"price\":950,\"ram\":\"16GB\",\"cpu\":\"Mid-tier\",\"battery\":\"8hr\"},{\"name\":\"Laptop B\",\"price\":880,\"ram\":\"16GB\",\"cpu\":\"Top-tier\",\"battery\":\"10hr\"},{\"name\":\"Laptop C\",\"price\":1050,\"ram\":\"32GB\",\"cpu\":\"Top-tier\",\"battery\":\"6hr\"},{\"name\":\"Laptop D\",\"price\":700,\"ram\":\"8GB\",\"cpu\":\"Entry-level\",\"battery\":\"9hr\"}]",
+    "reasoning_summary": "It offers the best performance with a top-tier CPU and 10 hours of battery life within budget.",
+    "decision": "Laptop B",
+    "timestamp": 1781956778,
+    "contentHash": "0xe5ca083caa3b72c6d45cd9718b24e7aebef8cd252e3f1a9685c4895868e8885f",
+    "txHash": "0x2fc01305f51434158dae2299f42ca95e53bb65e3510d905921af136c7406b0e6",
+    "receiptId": "3",
+    "blockNumber": 39461219
+  }
+]

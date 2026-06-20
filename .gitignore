@@ -3,5 +3,3 @@ node_modules/
 cache/
 artifacts/
 .DS_Store
-*.log
-data/receipts.json
