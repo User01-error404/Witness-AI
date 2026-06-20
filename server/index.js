@@ -84,5 +84,11 @@ app.get("/api/trust/:agentAddress", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Witness API running on http://localhost:${PORT}`));
+// Local dev server
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => console.log(`Witness API running on http://localhost:${PORT}`));
+}
+
+// Vercel serverless export
+module.exports = app;

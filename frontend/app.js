@@ -1,4 +1,4 @@
-const API = 'http://localhost:3001';
+const API = window.location.hostname === 'localhost' ? 'http://localhost:3001' : '';
 let receipts = [], active = null;
 
 // ── LOADING BAR ──
