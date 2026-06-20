@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const { ethers } = require("ethers");
 const { hashReceipt } = require("../agent/receipt");
-const WitnessArtifact = require("../artifacts/contracts/Witness.sol/Witness.json");
+const WitnessArtifact = require("./Witness.json");
 
 const app = express();
 app.use(cors());
