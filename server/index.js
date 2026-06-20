@@ -17,8 +17,11 @@ app.use(express.static(path.join(__dirname, '..', 'frontend')));
 const DATA_FILE = path.join(__dirname, "..", "data", "receipts.json");
 
 function loadReceipts() {
-  if (!fs.existsSync(DATA_FILE)) return [];
-  return JSON.parse(fs.readFileSync(DATA_FILE));
+  try {
+    return require("../data/receipts.json");
+  } catch (err) {
+    return [];
+  }
 }
 
 function getContract() {
