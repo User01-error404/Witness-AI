@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Witness — On-Chain AI Accountability Layer</title>
+<meta name="description" content="Every AI agent decision sealed on Monad blockchain. Tamper-proof, verifiable, instant.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading-bar" class="loading-bar"></div>
+<canvas id="canvas"></canvas>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">WITNESS</div>
+    <div class="header-right">
+      <div class="live-pill"><div class="live-dot"></div>MONAD TESTNET · LIVE</div>
+      <a class="explorer-btn" href="https://testnet.monadexplorer.com" target="_blank">⛓ Explorer ↗</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">// on-chain accountability layer for ai agents</div>
+    <h1>
+      <span class="line1">SEALED ON</span>
+      <span class="line2">MONAD CHAIN</span>
+    </h1>
+    <p class="hero-sub">Every decision an AI agent makes is hashed and sealed on-chain the instant it's made. Edit one word after the fact — the seal breaks instantly, provably, in front of anyone.</p>
+    <div class="hero-tag">⚡ ~1s blocks · near-zero gas · every decision sealed · not just outcomes</div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-val" id="stat-receipts">0</div>
+      <div class="stat-lbl">Receipts Sealed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" id="stat-block">—</div>
+      <div class="stat-lbl">Latest Block</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" style="background:linear-gradient(135deg,#a855f7,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">10143</div>
+      <div class="stat-lbl">Chain ID</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val" id="stat-status">…</div>
+      <div class="stat-lbl">API Status</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- RECEIPT LIST -->
+    <div class="list-panel">
+      <div class="panel-head">
+        <span class="panel-head-title">Decision Receipts</span>
+        <span class="badge" id="count-badge">0</span>
+      </div>
+      <div class="list-body" id="receipt-list">
+        <div class="empty">🔐<br><br>No receipts yet.<br><code>node agent/run-agent.js</code></div>
+      </div>
+    </div>
+
+    <!-- DETAIL -->
+    <div class="detail-panel">
+
+      <div class="placeholder" id="placeholder">
+        <div class="placeholder-icon">🔐</div>
+        <p>Select a sealed receipt<br>to inspect its reasoning trace<br>and verify it on-chain</p>
+      </div>
+
+      <div id="detail-body" style="display:none">
+        <div class="detail-body">
+
+          <div class="section-label">Sealed Decision Record</div>
+
+          <div class="field">
+            <label>Agent ID</label>
+            <input id="f-agent" disabled>
+          </div>
+          <div class="field">
+            <label>Task</label>
+            <input id="f-task" disabled>
+          </div>
+          <div class="field">
+            <label>Input Context Seen by Agent</label>
+            <textarea id="f-input" rows="2"></textarea>
+          </div>
+          <div class="field">
+            <label>Reasoning Summary</label>
+            <textarea id="f-reasoning" rows="2"></textarea>
+          </div>
+
+          <div class="tamper-tip">
+            <span class="tip-icon">⚠️</span>
+            <span>Try editing the <strong>Decision</strong> field below, then hit Verify — watch the chain catch it instantly.</span>
+          </div>
+
+          <div class="field">
+            <label>Decision — Edit this to demo tampering</label>
+            <input id="f-decision">
+          </div>
+
+          <div class="field">
+            <label>On-Chain Sealed Hash (keccak256)</label>
+            <div class="hash-display" id="f-hash">—</div>
+          </div>
+
+          <div id="f-tx" style="margin-bottom:20px"></div>
+
+          <div class="btn-row">
+            <button class="btn btn-primary" id="btn-verify">⛓ Verify Against Chain</button>
+            <button class="btn btn-secondary" id="btn-reset">↩ Reset Edits</button>
+          </div>
+
+          <div class="verify-result" id="verify-result">
+            <div class="res-icon" id="res-icon"></div>
+            <div>
+              <div class="res-title" id="res-title"></div>
+              <div class="res-msg" id="res-msg"></div>
+              <div class="res-hash" id="res-hash"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">WITNESS · keccak256 · Monad Testnet · Chain ID 10143</div>
+    <div class="footer-right"><div class="net-pulse"></div>testnet-rpc.monad.xyz</div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
